@@ -14,8 +14,27 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // allow async-await
+    "generator-star-spacing": "off",
+    // allow debugger during development
+    "vue/no-parsing-error": [
+      2,
+      {
+        "x-invalid-end-tag": false,
+      },
+    ],
+    "no-undef": "off",
+    "no-unused-vars": "warn",
+    "vue/no-unused-vars": "off",
+    camelcase: "off",
+    "no-self-assign": [
+      "error",
+      {
+        props: false,
+      },
+    ],
   },
   overrides: [
     {
